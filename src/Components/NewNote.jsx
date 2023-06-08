@@ -34,7 +34,7 @@ const NewNote = (props) => {
 
   return (
     <div className="flex justify-center align-center m-4 lg:m-8">
-      <form className="shadow-lg shadow-gray-300 w-11/12 m-4 lg:w-5/12 p-4 rounded-md">
+      <form className="shadow-lg shadow-gray-300 border border-gray-400 w-11/12 m-4 lg:w-5/12 p-4 rounded-md">
         <input
           className="text-start block text-gray-500 font-sans text-lg font-bold placeholder:text-gray-500 placeholder:font-semibold w-full"
           type="text"
@@ -42,7 +42,7 @@ const NewNote = (props) => {
           value={note.title}
           name="title"
           onChange={InputEvent}
-          onClick={handleClick}
+          style={{ display: active ? "block" : "none" }}
         />
         <textarea
           className="mt-2 text-base placeholder:text-gray-400 w-full placeholder:italic h-fit"
@@ -50,7 +50,7 @@ const NewNote = (props) => {
           value={note.content}
           name="content"
           onChange={InputEvent}
-          style={{ display: active ? "block" : "none" }}
+          onClick={handleClick}
         ></textarea>
         <button
           onClick={addEvent}

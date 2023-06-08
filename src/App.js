@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./Components/Header";
 import NewNote from "./Components/NewNote";
@@ -6,6 +6,26 @@ import Note from "./Components/Note";
 
 function App() {
   const [newNote, setNewNote] = useState([]);
+
+  useEffect(() => {
+    const savedNotes = JSON.parse(localStorage.getItem("notes-data"));
+
+    if (savedNotes) {
+      setNewNote(savedNotes);
+    }
+  }, []);
+
+  // useEffect(() => {
+  //   const savedNotes = JSON.parse(localStorage.getItem("notes-data"));
+
+  //   if (savedNotes) {
+  //     setNewNote(savedNotes);
+  //   }
+  // }, []);
+
+  useEffect(() => {
+    localStorage.setItem("notes-data", JSON.stringify(newNote));
+  }, [newNote]);
 
   const addNote = (note) => {
     setNewNote((prev) => {

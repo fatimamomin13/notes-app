@@ -15,11 +15,15 @@ const NewNote = (props) => {
 
   const addEvent = () => {
     setActive(false);
-    props.passNote(note);
-    setNote({
-      title: "",
-      content: "",
-    });
+    if (note.title === "" && note.content === "") {
+      alert("Empty Note Cannot Be Added");
+    } else {
+      props.passNote(note);
+      setNote({
+        title: "",
+        content: "",
+      });
+    }
   };
 
   const InputEvent = (event) => {
@@ -45,7 +49,7 @@ const NewNote = (props) => {
           style={{ display: active ? "block" : "none" }}
         />
         <textarea
-          className="mt-2 text-base placeholder:text-gray-400 w-full placeholder:italic h-fit"
+          className="mt-2 p-2 text-base placeholder:text-gray-400 w-full placeholder:italic h-fit"
           placeholder="Take a note..."
           value={note.content}
           name="content"

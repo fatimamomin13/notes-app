@@ -24,7 +24,7 @@ const Note = (props) => {
         <DeleteOutlineIcon className=" text-yellow-400 " />
       </button>
       <button
-        className=" float-right mt-4 lg:mt-4 rounded-3xl bg-neutral-200 w-16 h-7"
+        className=" float-right mt-4 mr-2 lg:mt-4 rounded-3xl bg-neutral-200 w-16 h-7"
         onClick={editButton}
       >
         <EditNoteIcon className=" text-yellow-400 " />

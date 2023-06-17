@@ -18,8 +18,12 @@ const Modal = (props) => {
   };
 
   const addEditedNote = () => {
-    props.passEditedNote(editedNote, props.editID);
-    props.onClose();
+    if (editedNote.title === "" && editedNote.content === "") {
+      alert("empty note cannot be added!");
+    } else {
+      props.passEditedNote(editedNote, props.editID);
+      props.onClose();
+    }
   };
 
   const closeButton = () => {

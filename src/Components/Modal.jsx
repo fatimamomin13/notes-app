@@ -52,14 +52,14 @@ const Modal = (props) => {
             </form>
             <div className="flex items-center justify-end p-4 border-t border-solid border-blueGray-200 rounded-b">
               <button
-                className="text-red-500 bg-gray-200 font-bold uppercase px-6 py-3 rounded text-sm outline-none focus:outline-none mr-1 mb-1"
+                className="text-red-500 bg-gray-200 font-bold uppercase px-6 py-3 rounded text-sm outline-none focus:outline-none mr-3 mb-1 w-24 h-10"
                 type="button"
                 onClick={closeButton}
               >
                 Close
               </button>
               <button
-                className="text-white bg-gray-200 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                className="text-white bg-gray-200 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-24 h-10"
                 type="button"
                 onClick={addEditedNote}
               >

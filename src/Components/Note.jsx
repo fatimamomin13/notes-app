@@ -1,9 +1,14 @@
 import React from "react";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import EditNoteIcon from "@mui/icons-material/EditNote";
 
 const Note = (props) => {
   const deleteButton = () => {
     props.onDelete(props.id);
+  };
+
+  const editButton = () => {
+    props.onEdit(props.id);
   };
 
   return (
@@ -17,6 +22,12 @@ const Note = (props) => {
         onClick={deleteButton}
       >
         <DeleteOutlineIcon className=" text-yellow-400 " />
+      </button>
+      <button
+        className=" float-right mt-4 lg:mt-4 rounded-3xl bg-neutral-200 w-16 h-7"
+        onClick={editButton}
+      >
+        <EditNoteIcon className=" text-yellow-400 " />
       </button>
     </div>
   );

@@ -12,7 +12,7 @@ const Note = (props) => {
   };
 
   return (
-    <div className="border border-gray-400 w-10/12 rounded-md m-8 lg:w-2/12 lg:inline-block lg:my-2 lg:ml-16 p-4 h-fit overflow-auto">
+    <div className="border border-gray-400 w-10/12 rounded-md m-8 lg:w-2/12 lg:inline-block lg:my-2 lg:ml-16 p-4 h-fit overflow-auto mx-auto">
       <h1 className="text-start block text-gray-600 font-semibold my-2">
         {props.title}
       </h1>
